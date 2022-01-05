@@ -1,0 +1,73 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Poppins&display=swap');*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+head{
+    font-size: 62.5%;
+}
+
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items:center;
+    height: 5rem;
+    position: relative;
+}
+
+
+.nav_links{
+    display:flex;
+    margin-right: 2rem;
+}
+
+header h3{
+    font-size: 2rem;
+    margin-left: 2rem;
+    font-family: 'PT Serif', serif;
+    font-weight: 600;
+    line-height: 6rem;
+    text-transform: uppercase;
+}
+nav ul li{
+    list-style-type: none;
+    padding: 0 1.5rem;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    line-height: 6rem;
+    padding: .13rem .8rem;
+    border-radius: 3px;
+    transition: .5s;
+}
+
+a.active, a:hover{
+    background-color: cornflowerblue;
+}
+
+.fa-bars{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    font-size: 2rem;
+    margin: 2rem 1.7rem;
+    display: none;
+    transition: all .5s;
+}
+
+.fa-times{
+    position: absolute;
+    top: 0px;
+    right: 0;
+    font-size: 2rem;
+    margin: 2rem 1.7rem;
+    display: none;
+    transition: all .5s;
+}
+
