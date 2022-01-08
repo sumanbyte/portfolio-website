@@ -1,11 +1,30 @@
-@import url('https://fonts.googleapis.com/css2?family=PT+Serif:wght@700&family=Poppins&display=swap');*{
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Montserrat&family=PT+Serif:wght@700&family=Poppins&display=swap');
+
+
+
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+html{
+    overflow: auto;
+}
+
+:root{
+    --intro-sec-font: 'Montserrat', sans-serif;
+}
+
 head{
     font-size: 62.5%;
+}
+
+.top{
+    position: fixed;
+    width: 100%;
+    top: 0;
+    background: white;
 }
 
 
@@ -69,5 +88,107 @@ a.active, a:hover{
     margin: 2rem 1.7rem;
     display: none;
     transition: all .5s;
+}
+
+/* ----------intro ------------ */
+.intro{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-height: calc(100vh);
+    margin-top: 10rem;
+
+}
+
+
+.profile-img{
+    border-radius: 50%;
+    border: 3px solid cornflowerblue;
+    max-width: 100%;
+    height: auto;
+}
+.profile-img:hover{
+    animation-name: circular;
+    animation-duration: 1s;
+    animation-timing-function: ease-in;
+    animation-fill-mode: forwards;
+    animation-delay: .4s;
+    animation-iteration-count: infinite;
+}
+@keyframes circular{
+    0%{
+        border: 3px solid green;
+    }
+    10%{
+        border: 3px solid red;
+    }
+    25%{
+        border-right: 3px solid yellow;
+    }
+    30%{
+        border: 3px solid blue;
+    }
+    40%{
+        border-left: 3px solid yellow;
+    }
+    50%{
+        border-bottom: 3px solid yellow;
+    }
+    70%{
+        border: 3px solid purple;
+    }
+    80%{
+        border-top: 3px solid yellow;
+    }
+    90%{
+        border: 3px solid yellow;
+    }
+    100%{
+        border: 3px solid cornflowerblue;
+    }
+}
+
+
+.intro_head{
+    font-family: var(--intro-sec-font);
+    font-size: 2.5rem;
+}
+.intro_head_name{
+    font-family: var(--intro-sec-font);
+    color: cornflowerblue;
+    font-size: 3rem;
+    
+}
+
+.intro_work{
+    font-family: var(--intro-sec-font);
+    font-size: 1.5rem;
+    margin-top: -.9rem;
+}
+
+
+
+
+.social-media-head{
+    font-size: 1.5rem;
+    display: inline;
+    font-family: 'Luxurious Roman', cursive;
+    margin-right: 3rem;
+    margin-left: 1rem;
+}
+
+.social-media{
+    display: flex;
+    margin-top: .7rem;
+    padding: 8px;
+    border-radius: 1rem;
+    background: cornflowerblue; 
+}
+
+.social-media-icons{
+    font-size: 1.5rem;
+    margin-top: 2px;
 }
 

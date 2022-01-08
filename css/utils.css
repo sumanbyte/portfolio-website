@@ -7,3 +7,8 @@
 .block{
     display: block;
 }
+
+.touch-action{
+    overflow: hidden ;
+    max-height: 100%;
+}

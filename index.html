@@ -10,6 +10,7 @@
     <title>Portfolio-Site</title>
 </head>
 <body>
+
 <section class="top">
     <header>
         <i class="fas fa-times" onclick="hideMenu()" id="fa_times"></i>
@@ -24,45 +25,43 @@
                 <li ><a href="#">Skills</a></li>
                 <li ><a href="#">Work</a></li>
                 <li ><a href="#">Contact</a></li>
-
-
             </ul>
         </nav>
     </header>
 </section>
-<hr>
+
+
+
+<section class="intro">
+    <div class="head-items">
+        <h1 class="intro_head_name">
+            Hi, 
+            <h1 class="intro_head">My Name is</h1>
+            <h1 class="intro_head_name">Suman Parajuli</h1>.
+        </h1>
+        <h1 class="intro_work">Tech Enthusiast, Passionate Learner</h1>
+
+        <div class="social-media">
+            <div class="social-media-head">
+                <h4>Connect With Me:</h4>
+            </div>
+            <div class="social-media-icons">
+                <i class="fab fa-facebook-square"></i>
+                <i class="fab fa-twitter-square"></i>
+                <i class="fab fa-instagram-square"></i>
+                <i class="fab fa-github-square"></i>
+                <i class="fab fa-linkedin"></i>   
+            </div>
+        </div>
+    </div>
+    <img src="./img/profile-pic.png" class="profile-img" alt="">
+</section>
+
+
+
+
+
 </body>
 <script src="./js/app.js"></script>
 <script src="./js/all.js"></script>
-<script>
-
-    let toggleStatus = 1
-
-    function showMenu(){
-        if(toggleStatus ==1){
-            document.getElementById('fa_bars').classList.add('none')
-            document.getElementById('fa_times').classList.add('block')
-            document.getElementById('navLinks').style.left = '0';
-            toggleStatus = 0;
-        }
-    }
-    
-    function hideMenu(){
-        if(toggleStatus == 0){
-            document.getElementById('fa_bars').classList.remove('none')
-            document.getElementById('fa_times').classList.remove('block');
-            document.getElementById('navLinks').style.left = '-100%';
-            toggleStatus =1;
-        }
-    }
-
-    let navLinks = document.getElementById('navLinks');
-    for(let i=0; i<navLinks.childNodes.length; i++){
-        navLinks.childNodes[i].addEventListener('click', function(){
-            hideMenu();
-        })
-    }
-    
-
-</script>
 </html>
