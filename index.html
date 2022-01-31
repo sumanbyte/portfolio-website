@@ -7,61 +7,207 @@
     <link rel="stylesheet" href="./css/styles.css">
     <link rel="stylesheet" href="./css/responsive.css">
     <link rel="stylesheet" href="./css/utils.css">
-    <title>Portfolio-Site</title>
+    <link rel="shortcut icon" class="circle" href="./img/profile-img.ico" type="image/x-icon">
+    <title>Suman Parajuli | Portfolio-Site</title>
 </head>
 <body>
 
-<section class="top">
+<section class="top" id="navbar">
     <header>
         <i class="fas fa-times" onclick="hideMenu()" id="fa_times"></i>
         <i class="fas fa-bars" onclick="showMenu()"  id="fa_bars"></i>
-    <h3 class="nav-head">Suman</h3>
+    <h3 class="nav-head"><a href="#int-logo"></a>Suman</a></h3>
         <nav>
             <ul class="nav_links"  id="navLinks">
 
 
-                <li><a class="active">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li ><a href="#">Skills</a></li>
-                <li ><a href="#">Work</a></li>
-                <li ><a href="#">Contact</a></li>
+                <li><a class="a active" href="#intro-id">Home</a></li>
+                <li><a class="a" href="#about-id" >About</a></li>
+                <li><a class="a" href="#skill-id">Skills</a></li>
+                <li><a class="a" href="#work-id">Work</a></li>
+                <li><a class="a" href="#contact-id">Contact</a></li>
             </ul>
         </nav>
     </header>
 </section>
 
+<section class="m-b" id="intro-id">
+    <h2>hidden</h2>
+</section>
 
+<section class="intro" id="int-logo">
+        <div class="head-items">
+            <h1 class="intro_head_name">
+                Hi, 
+                <h1 class="intro_head">My Name is</h1>
+                <h1 class="intro_head_name">Suman Parajuli</h1>.
+            </h1>
+            <h1 class="intro_work">Tech Enthusiast, Passionate Learner</h1>
 
-<section class="intro">
-    <div class="head-items">
-        <h1 class="intro_head_name">
-            Hi, 
-            <h1 class="intro_head">My Name is</h1>
-            <h1 class="intro_head_name">Suman Parajuli</h1>.
-        </h1>
-        <h1 class="intro_work">Tech Enthusiast, Passionate Learner</h1>
-
-        <div class="social-media">
-            <div class="social-media-head">
-                <h4>Connect With Me:</h4>
-            </div>
-            <div class="social-media-icons">
-                <i class="fab fa-facebook-square"></i>
-                <i class="fab fa-twitter-square"></i>
-                <i class="fab fa-instagram-square"></i>
-                <i class="fab fa-github-square"></i>
-                <i class="fab fa-linkedin"></i>   
+            <div class="social-media">
+                <div class="social-media-head">
+                    <h4>Connect With Me:</h4>
+                </div>
+                <div class="social-media-icons">
+                    <a href="https://www.facebook.com/sumanbyte" target="_blank"><i class="fab fa-facebook-square"></i></a>
+                    <a href="https://twitter.com/sumanbyte" target="_blank"><i class="fab fa-twitter-square"></i></a>
+                    <a href="https://instagram.com/sumanbyte" target="_blank"><i class="fab fa-instagram-square"></i></a>
+                    <a href="https://github.com/sumanbyte" target="_blank"><i class="fab fa-github-square"></i></a>
+                    <a href="https://www.linkedin.com/in/sumanbyte/" target="_blank">
+                    <i class="fab fa-linkedin"></i></a>  
+                </div>
             </div>
         </div>
-    </div>
-    <img src="./img/profile-pic.png" class="profile-img" alt="">
+
+        <div class="profile-img-cont">
+            <img src="./img/profile-img.jpeg" class="profile-img" alt="">
+        </div> 
 </section>
 
 
 
+<section class="about" id="about-id">
+    <h1 class="about-head">About Me: </h1>
+    <div class="about-items">
+        <div class="about-item-p">
+            Hey, Everyone. I am Suman Parajuli. A High School Student age of 17 exploring web development as well as other stuffs like data science, Machine Learning, Cybersecurity and all that. I love programming, especially building something out of what i learnt always encourages me to spend more time on it. I have no such experience in web development but i am continiously learning and improving my skills. My goal is to become a full stack developer.
+        </div>
+    </div>
+</section>
+
+
+<section class="skills" id="skill-id">
+    <h1 class="skill-head">Skills:</h1>
+    <div class="cont-center">
+        <div class="container">
+            <div class="left">
+                <h2>Some technologies that i'm familiar with</h2>
+                <p>(Don't take percentage seriously. i just used it for convention)</p>
+                <p>I am a newbie</p>
+                <div class="left-col">
+                    <ul>
+                        <li>HTML</li>
+                        <div class="progress html ">
+                          80%
+                        </div>
+                        <li>CSS</li>
+                        <div class="progress css">
+    
+                        </div>
+                        <li>Javascipt</li>
+                        <div class="progress script">
+    
+                        </div>
+                        <li>Python</li>
+                        <div class="progress python">
+    
+                        </div>
+                        <li>Linux</li>
+                        <div class="progress linux">
+    
+                        </div>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="work" id="work-id">
+    <h1 class="work-head">Work: </h1>
+    <div class="items">
+        <div class="item-1">
+            <h3>Newsy News</h3>
+            <img src="./img/project-1.png" alt="news pic">
+            <p>Used tailwind css to design and javascript to fetch news</p>
+            <span class="bold">Github:</span>
+            <a href="https://github.com/sumanbyte/Newsy-News" target="_blank"><i class="fab fa-github-square fnt-git"></i></a>
+        </div>
+        <div class="item-2">
+            <h3>School Site</h3>
+            <img src="./img/project-2.png" alt="">
+            <p class="odd">Tried to create a website . Practice of what i learnt.</p>
+            <span class="bold">Github:</span>
+            <a href="https://github.com/sumanbyte/School-Website" target="_blank"><i class="fab fa-github-square fnt-git"></i></a>
+        </div>
+        
+        <div class="item-3">
+            <h3>Responsive portfolio</h3>
+            <img src="./img/project-3.png" alt="">
+            <p>Tried to design this portfolio website. learnt a lot while creating it.</p>
+            <span class="bold">Github:</span>
+            <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ" target="_blank"><i class="fab fa-github-square fnt-git"></i></a>
+        </div>
+    </div>
+</section>
+
+<section class="contact" id="contact-id">
+    <div class="contact-head">
+        <h1>Contact</h1>
+    </div>
+    
+    <div class="container-1">
+        <div class="left-1">
+            <div class="box">
+                <div class="icon">
+                    <i class="fas fa-map-marker"></i>
+                </div>
+                <div class="text">
+                    <h3>Address</h3>
+                    <p>Barahkshetra Municipality-7 <br>
+                    Sunsari, Nepal</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <div class="text">
+                    <h3>Phone</h3>
+                    <p>9842118847</p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="text">
+                    <h3>Email</h3>
+                    <p>sumansupercell@gmail.com</p>
+                </div>
+            </div>
+        </div>
+        <div class="right">
+            <div class="inputbox">
+                <input type="text" required>
+                <span>Full Name</span>
+            </div>
+            <div class="inputbox">
+                <input type="text" required>
+                <span>E-mail</span>
+                
+            </div>
+            <div class="inputbox">
+                <textarea name="" id="" cols="30" rows="10" required></textarea>
+                <span>Type your Message Here</span>
+            </div>
+            <div class="inputbox">
+                <div class="submit-btn">
+                    <button type="submit">Send</button>
+                    <i class="fas fa-paper-plane ic"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+     
+    
+</section>
+
 
 
 </body>
+<script src="./js/jquery-3.6.0.min.js"></script>
 <script src="./js/app.js"></script>
 <script src="./js/all.js"></script>
 </html>

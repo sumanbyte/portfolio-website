@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Montserrat&family=PT+Serif:wght@700&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Luxurious+Roman&family=Montserrat&family=Noto+Sans&family=PT+Serif:wght@700&family=Poppins&family=Roboto+Condensed:wght@300&family=Roboto+Mono&display=swap');
+
 
 
 
@@ -10,6 +11,8 @@
 
 html{
     overflow: auto;
+    
+    
 }
 
 :root{
@@ -23,8 +26,10 @@ head{
 .top{
     position: fixed;
     width: 100%;
+    z-index: 666;
+    background-color: white;
     top: 0;
-    background: white;
+    transition: top .5s;
 }
 
 
@@ -32,10 +37,13 @@ header{
     display:flex;
     justify-content: space-between;
     align-items:center;
-    height: 5rem;
-    position: relative;
+    height: 5.6rem;
+    
 }
 
+.m-b{
+    visibility: hidden;
+}
 
 .nav_links{
     display:flex;
@@ -49,6 +57,7 @@ header h3{
     font-weight: 600;
     line-height: 6rem;
     text-transform: uppercase;
+    cursor: pointer;
 }
 nav ul li{
     list-style-type: none;
@@ -90,6 +99,8 @@ a.active, a:hover{
     transition: all .5s;
 }
 
+
+
 /* ----------intro ------------ */
 .intro{
     width: 80%;
@@ -97,9 +108,7 @@ a.active, a:hover{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    max-height: calc(100vh);
-    margin-top: 10rem;
-
+    min-height: calc(100vh);
 }
 
 
@@ -108,6 +117,8 @@ a.active, a:hover{
     border: 3px solid cornflowerblue;
     max-width: 100%;
     height: auto;
+    
+    width: 310px;
 }
 .profile-img:hover{
     animation-name: circular;
@@ -154,6 +165,7 @@ a.active, a:hover{
 .intro_head{
     font-family: var(--intro-sec-font);
     font-size: 2.5rem;
+    
 }
 .intro_head_name{
     font-family: var(--intro-sec-font);
@@ -166,6 +178,7 @@ a.active, a:hover{
     font-family: var(--intro-sec-font);
     font-size: 1.5rem;
     margin-top: -.9rem;
+    text-align: initial;
 }
 
 
@@ -174,9 +187,10 @@ a.active, a:hover{
 .social-media-head{
     font-size: 1.5rem;
     display: inline;
-    font-family: 'Luxurious Roman', cursive;
+    font-family: 'Roboto Condensed', sans-serif;
     margin-right: 3rem;
     margin-left: 1rem;
+    border-radius: 20px;
 }
 
 .social-media{
@@ -190,5 +204,413 @@ a.active, a:hover{
 .social-media-icons{
     font-size: 1.5rem;
     margin-top: 2px;
+}
+
+.social-media-icons a{
+    text-decoration: none;
+    color: black;
+}
+
+/* intro section end  */
+
+/* about section start  */
+.about{
+    width: 80%;
+    margin: auto;
+    margin-top: 13rem;
+    margin-bottom: 20rem;
+}
+.about-head{
+    background-image: linear-gradient(rgba(4, 9, 30, .7), rgba(4, 9, 30, .7)), url('../img/bg-intro.jpg');
+    background-position: center;
+    padding: 1.5rem;    
+    background-repeat: no-repeat;
+    border-radius: 20px;
+}
+.about h1{
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    margin-bottom: 1rem;
+    color: white;
+    
+
+}
+
+.about h1::after{
+    content: '';
+    width: 0%;
+    height: 5px;
+    background: cornflowerblue;
+    display: block;
+    margin: auto;
+    transition: .5s;
+}
+.about h1:hover::after{
+    width: 25vw;
+}
+
+
+
+.about-item-p{
+    font-size: 1.3rem;
+    text-align: justify;
+    width: 90%;
+    margin: 0 auto;
+    font-family: 'Noto Sans', sans-serif;
+
+    
+}
+/* about section end  */
+
+
+/* skills section start  */
+
+.skills{
+    width: 80%;
+    margin: auto;
+    margin-bottom: 17rem;
+}
+.skills h1{
+    background-image: linear-gradient(rgba(4,9,30,.7), rgba(4,9,30,.7)), url('../img/bg-skills.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-size: 2.5rem;
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 1.5rem;
+    color: white;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.skill-head::after{
+    content: '';
+    width: 0%;
+    height: 5px;
+    background-color: cornflowerblue;
+    display: block;
+    margin: auto;
+    transition: .5s;
+    
+}
+.skill-head:hover::after{
+    width: 25%;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle:wght@700&family=Kaushan+Script&family=Nunito:wght@300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cont-center{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.left-col{
+    z-index: -3;
+}
+.container{
+    padding: 40px;
+    width: 80%;
+    border-radius: 20px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,.5);
+}
+.left h2{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.left p{
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+}
+
+li{
+    list-style-type: none;
+    font-family: 'Nunito';
+   
+}
+
+
+.left-col{
+    position: relative;
+}
+
+.progress{
+    margin-bottom: .8rem;
+    margin-top: -.1rem;
+    border-radius: 20px;
+    text-align: right;
+    
+
+}
+
+.progress.html{
+    width: 90%;
+    background-color: cornflowerblue;
+}
+
+
+
+.progress.css{
+    width: 60%;
+    background-color: cornflowerblue;
+}
+
+.progress.css::after{
+    content: '60%';
+}
+
+.progress.script{
+    width: 70%;
+    background-color: cornflowerblue;
+}
+
+.progress.script::after{
+    content: '70%';
+}
+
+.progress.python{
+    width: 85%;
+    background-color: cornflowerblue;
+}
+
+.progress.python::after{
+    content: '85%';
+}
+
+.progress.linux{
+    width: 55%;
+    background-color: cornflowerblue;
+}
+
+.progress.linux::after{
+    content: '55%';
+}
+
+
+/* skills section end  */
+
+/* work section start  */
+.work{
+    width: 80%;
+    margin: auto;
+}
+
+.work-head{
+    text-align: center;
+    font-family: var(--intro-sec-font);
+    font-size: 2.5rem;
+    background-image: linear-gradient(rgba(4,9,32, .7), rgba(4,9,32,.7)), url(../img/bg-work.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 1.5rem;
+    border-radius: 2rem;
+    color: white;
+    cursor: pointer;
+}
+
+.work-head::after{
+    transition: .5s;
+    content: '';
+    display: block;
+    width: 0;
+    margin: auto;
+    height: 5px;
+    background-color: cornflowerblue;
+}
+
+.work-head:hover::after{
+    width: 25%;
+}
+
+.items{
+    margin-top: 2rem;
+    display: flex;
+    justify-content: center;
+    
+    
+}
+
+.item-1 img, .item-2 img, .item-3 img{
+    max-width: 15rem;
+    height: auto;
+    border-radius: 10px;
+}
+
+
+.item-1, .item-2, .item-3{
+   flex: 1 0 10%;
+    border-radius: 2rem;
+    padding: 10px;
+    margin: 10px 5px;
+    text-align: center;
+    font-family: var(--intro-sec-font) ;
+   box-shadow: 5px 5px 15px rgba(0,0,0,0.5);
+
+}
+
+.items h3{
+    margin-bottom: 2rem;
+}
+.items p{
+    text-align: center;
+}
+.items a{
+    text-decoration: none;
+    color: black;
+}
+
+/* work section end  */
+
+#contact-id{
+    margin-top: 7rem;
+    margin-bottom: 7rem;
+}
+
+.contact{
+    width: 80%;
+    margin: auto;
+}
+
+.contact-head h1{
+    font-size: 2.5rem;
+    text-align: center;
+    font-family: var(--intro-sec-font);
+    background-image: linear-gradient(rgba(4,9,32,.5), rgba(4,9,32,.5)), url('../img/bg-contact.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 1.5rem;
+    border-radius: 20px;
+    color: white;
+    cursor: pointer;
+}
+
+.contact-head h1::after{
+    content: '';
+    display: block;
+    margin: auto;
+    height: 5px;
+    width: 0;
+    background-color: cornflowerblue;
+    transition: .5s;
+}
+
+.contact-head h1:hover:after{
+    width: 25%;
+}
+
+.container-1{
+    display: flex;
+    
+    
+    justify-content: space-around;
+    margin-top: 2rem;
+    
+}
+
+.left-1{
+    width: 50%;
+    max-width: 800px;
+}
+
+.box{
+    display: flex;
+    padding: 2rem 0;
+   
+}
+
+.box .icon{
+    background-color: cornflowerblue;
+    border-radius: 50%;
+    height: 65px;
+    width: 65px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box .text{
+    margin-left: 30px;
+}
+
+.right{    
+    width: 50%;
+    max-width: 800px;
+    padding: 10px 0;
+}
+
+.inputbox{
+    position: relative;
+    padding: 10px 0;
+}
+
+.inputbox span{
+    padding: 15px 10px;
+    position: absolute;
+    left: 0;
+    pointer-events: none;
+    transition: .5s;
+}
+
+
+.inputbox textarea,input{
+    resize: none;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding: 15px 10px 15px 10px;
+    font-weight: bold;
+    font-size: 16px;
+    border-bottom: 2px solid black;
+}
+
+
+.submit-btn{
+    position: relative;
+    width: max-content;
+    margin-top: -20px;
+}
+
+
+.submit-btn button{
+    background: cornflowerblue;
+    padding: 15px 40px 15px 10px;
+    font-size: 16px;
+    text-transform: uppercase;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.ic{
+    font-size: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 17px;
+    margin: 0 8px;
+}
+
+
+.inputbox input:focus ~ span, .inputbox textarea:focus ~ span,
+.inputbox input:valid ~ span, .inputbox textarea:valid ~ span{
+    transform: translateY(-20px);
+    font-size: 13px;
+    transition: .5s;
+    color: red;
+}
+
+.contact-box{
+    display: flex;
+    
+    font-family: 'Montserrat', sans-serif;
 }
 

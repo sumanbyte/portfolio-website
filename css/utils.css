@@ -1,6 +1,12 @@
 .tc{
     text-align: center;
 }
+.tr{
+    text-align: right;
+}
+.tl{
+    text-align: left;
+}
 .none{
     display: none;
 }
@@ -11,4 +17,21 @@
 .touch-action{
     overflow: hidden ;
     max-height: 100%;
+}
+
+
+
+.fnt-git{
+    margin-top: 1rem;
+    font-size: 1.4rem;
+}
+
+.bold{
+    font-weight: bold;
+}
+
+
+
+.circle{
+    border-radius: 50%;
 }
