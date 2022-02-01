@@ -551,7 +551,7 @@ li{
 
 .inputbox{
     position: relative;
-    padding: 10px 0;
+    padding: 15px 0;
 }
 
 .inputbox span{
@@ -602,7 +602,7 @@ li{
 
 .inputbox input:focus ~ span, .inputbox textarea:focus ~ span,
 .inputbox input:valid ~ span, .inputbox textarea:valid ~ span{
-    transform: translateY(-20px);
+    transform: translateY(-30px);
     font-size: 13px;
     transition: .5s;
     color: red;

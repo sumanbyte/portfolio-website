@@ -60,7 +60,90 @@ for(var i=0; i<a.length; i++){
 //         }
 //     })
 // }
+/*
+* Recaptcha
+* name should be more than 7 character(customizeable).
+* email should be in well format
+* message should be more than 30 words(customizeable)
+*/
+let fname = document.getElementById('name');
+let fnamespan = document.getElementById('name-span')
+let email = document.getElementById('email');
+let emailspan = document.getElementById('email-span');
+let textarea = document.getElementById('textarea');
+let textareaspan = document.getElementById('textarea-span');
 
+
+
+let send = document.getElementById('send');
+send.addEventListener('click', sendFunc);
+
+function sendFunc(){
+    if(!(isEmail(email.value))){
+        emailspan.innerText = '**Please Enter a valid email address**';
+        event.preventDefault();
+        email.addEventListener('keyup', function(){
+            if((isEmail(email.value)) || isEmpty(email)){
+                emailspan.innerText = 'E-mail'
+            }
+        })
+    }
+
+    if(isName(fname.value)){
+        fnamespan.innerText = '**Please enter a valid full name**'
+        event.preventDefault();
+        fname.addEventListener('keyup', function(){
+            if((isName(fname.value)) || isEmpty(fname)){
+                fnamespan.innerText = "Full Name";
+            }
+        })
+    }
+
+    
+    if(isMessage(textarea.value) == false){
+        textareaspan.innerText = '**Message word count should be between 20-200**';
+        event.preventDefault()
+        textarea.addEventListener('keyup', function(){
+            if((isMessage(textarea.value)) || isEmpty(textarea)){
+                textareaspan.innerText = 'Type your Message Here...';
+            }
+        })
+       
+    }
+}
+
+
+
+
+// utility functions
+function isEmpty(text){
+    let textval = text.value;
+    if(textval === ''){
+        return true
+    }
+    return false
+}
+
+function isMessage(message){
+    if((message.split(' ').length < 20) || (message.split(' ').length > 200)){
+        return false;
+    }
+    return true;
+}
+
+function isName(name){
+    let namelen = name.length;
+    if((namelen <= 6) || (namelen >= 18)){
+        return true
+    }
+    return false
+}
+
+
+function isEmail(email){
+    var regex = /^([a-zA-Z0-9_.+-])+\@(([a-zA-Z0-9-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+    return regex.test(email);
+}
 
 
 //Dom Cache
@@ -68,6 +151,7 @@ $header = $('header');
 $navLink = $header.find('nav a')
 $logo = $header.find('.nav-head')
 
+// implementing jquery to smooth scroll.
 $(document).ready(function(){
     smoothScrolling(200);
 });
@@ -86,10 +170,8 @@ function smoothScrolling(duration){
     })
 }
 
-
+// Calculation of user scrolling to hide and show navbar
 var prevScrollpos = window.pageYOffset;
-
-
 window.onscroll = function(){
     var currentScrollPos = window.pageYOffset;
     
