@@ -156,11 +156,25 @@
         display: flex;
         flex-wrap: wrap;
     }
+
+    .box .icon{
+        width: 35px;
+        height: 35px;
+    }
     .box{
-        padding: 20px;
-        align-self: stretch;
+        padding: 1rem;
+        
+    }
+    .box .text{
+        margin-left: 1rem;
     }
     .right{
         width: 100%;
+    }
+}
+
+@media screen and (max-width:290px){
+    .br{
+        display: none;
     }
 }
