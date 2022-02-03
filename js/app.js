@@ -183,3 +183,7 @@ window.onscroll = function(){
     prevScrollpos = currentScrollPos;
 }
 
+
+// Sending Email Function
+
+

@@ -179,26 +179,34 @@
             </div>
         </div>
         <div class="right">
-            <form action="">
+            <form action="https://formsubmit.co/c0e57461b396adae9c8c7c2052bdbfce" method="POST">
+                <!-- Honeypot -->
+                <input type="text" name="_honey" style="display: none;">
+
+                <!-- Disable Captcha -->
+                <input type="hidden" name="_captcha" value="false">
+
+                <input type="hidden" name="_next" value="http://127.0.0.1:5500/success.html">
+
                     <div class="inputbox">
-                        <input type="text" required id="name">
+                        <input type="text" required id="name" name="Full&nbsp;Name">
                         <span id="name-span">Full Name</span>
                         
                     </div>
                     <div class="inputbox">
-                        <input type="text" id="email" required>
+                        <input type="text" id="email" name="Email" required>
                         <span id="email-span">E-mail</span>
                         
                     </div>
                     <div class="inputbox">
-                        <textarea name="" id="textarea" cols="30" rows="10" required></textarea>
+                        <textarea name="Message" id="textarea" cols="30" rows="10" required></textarea>
                         <span id="textarea-span">Type your Message Here...</span>
                     </div>
                     <div class="inputbox">
                         <div class="submit-btn">
                             <button type="submit" id="send">Send</button>
                             <i class="fas fa-paper-plane ic"></i>
-                           
+
                         </div>
                     </div>
                 </div>
