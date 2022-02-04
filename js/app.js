@@ -78,6 +78,7 @@ let textareaspan = document.getElementById('textarea-span');
 let send = document.getElementById('send');
 send.addEventListener('click', sendFunc);
 
+
 function sendFunc(){
     if(!(isEmail(email.value))){
         emailspan.innerText = '**Please Enter a valid email address**';
@@ -110,7 +111,9 @@ function sendFunc(){
         })
        
     }
+    
 }
+
 
 
 
@@ -146,6 +149,7 @@ function isEmail(email){
 }
 
 
+
 //Dom Cache
 $header = $('header');
 $navLink = $header.find('nav a')
@@ -153,6 +157,7 @@ $logo = $header.find('.nav-head')
 
 // implementing jquery to smooth scroll.
 $(document).ready(function(){
+    $('#contact-form')[0].reset();
     smoothScrolling(200);
 });
 
@@ -183,7 +188,5 @@ window.onscroll = function(){
     prevScrollpos = currentScrollPos;
 }
 
-
-// Sending Email Function
 
 
